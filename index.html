@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>DoodleNotes</h2>
+    <canvas id="canvas"></canvas>
+
+    <button onclick='toggleMode(modes.pan)'>Toggle Pan</button>
+    <button onclick='toggleMode(modes.drawing)'>Toggle Drawing</button>
+    <input id='colorPicker' value='#000000' data-jscolor="">
+    <button onclick='clearCanvas(canvas)'>Clear</button>
+
+    <script src="./lib/jscolor.js"></script>
+    <script src="./lib/fabric.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

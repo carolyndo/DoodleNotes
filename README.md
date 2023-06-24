@@ -1,2 +1,1 @@
 # DoodleNotes
-hi amara
