@@ -15,19 +15,21 @@
     <img src="doodlenotes.png" alt="Hand-drawn DoodleNotes!">
     </div>
     
-    <p><center><font size="+2">An inconvenient way to take notes</font></center></p>
+    <p><font size="+2">An inconvenient way to take notes</font></p>
     
     <div class="bun"><img src="pencilbun.png" alt="goofy looking bunny holding a pencil"></div>
 
     <span class="cursor"></span>
     
-    <canvas id="canvas"></canvas>
-
-    <button onclick='toggleMode(modes.pan)'>Move Stuff</button>
-    <button onclick='toggleMode(modes.drawing)'>Doodle</button>
-    <input id='colorPicker' value='#000000' data-jscolor="">
-    <button onclick='clearCanvas(canvas)'>Clear</button>
-
+    <canvas id="canvas" style="border:1px solid #000000"></canvas>
+    <div class="wrapper">
+        <button id='buttonPan' onclick='toggleMode(modes.pan)'>Move Stuff</button>
+        <button id='buttonDraw' onclick='toggleMode(modes.drawing)'>Doodle</button>
+        <input id='colorPicker' value='#000000' data-jscolor="">
+        <button id='buttonClear' onclick='clearCanvas(canvas)'>Clear</button>
+        <input type="file" id="imageLoader" name="imageLoader" />
+        <a id="lnkDownload" href="#">Save image</a>
+    </div>
     <script src="./lib/jscolor.js"></script>
     <script src="./lib/fabric.min.js"></script>
     <script src="index.js"></script>

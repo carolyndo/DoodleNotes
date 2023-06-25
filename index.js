@@ -5,9 +5,9 @@ document.addEventListener("mousemove",function(x){
 
 const initCanvas = (id) => {
     return new fabric.Canvas(id, {
-        width: 500,
-        height: 500,
-        backgroundColor: 'lightgray',
+        width: 750,
+        height: 750,
+        backgroundColor: 'white',
         selection: false
     });
 }
@@ -98,6 +98,38 @@ const modes = {
     drawing: 'drawing'
 }
 
+var imageLoader = document.getElementById('imageLoader');
+imageLoader.addEventListener('change', handleImage, false);
+
+
+function handleImage(e) {
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        var img = new Image();
+        img.onload = function () {
+            var imgInstance = new fabric.Image(img, {
+               selectable: 1
+            })
+            canvas.add(imgInstance);
+            canvas.deactivateAll().renderAll();
+        }
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);
+}
+
+
+
+var imageSaver = document.getElementById('lnkDownload');
+imageSaver.addEventListener('click', saveImage, false);
+
+function saveImage(e) {
+    this.href = canvas.toDataURL({
+        format: 'png',
+        quality: 0.8
+    });
+    this.download = 'canvas.png'
+}
 // setBackground('https://pixabay.com/photos/wisteria-flower-plants-8071924/', canvas);
 
 setPanEvents(canvas)

@@ -5,16 +5,55 @@ body{
     margin: 0;
 }
 
+p {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
 .doodle{
-    display:block;
-    margin-left:auto;
-    margin-right: auto;
-    width: 90%;
+    display:flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 80%;
+    height: auto;
+    width:auto\9;
+
+    
 }
 
 .bun{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    margin: 0 auto;
     width: 15%;
+    justify-content: center;
 }
+a{
+    color: #000000;
+    display: block;
+    background-color: #F5F5F5; 
+    width: 80px;
+    padding: 2px;
+    margin-top: 2px;
+    text-decoration:none;
+    border: .5px solid #000000;
+    border-radius: 2px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    
+
+}
+.canvas-container {
+    margin: 0 auto;
+}
+
+
+.wrapper {
+    text-align: center;
+    margin-bottom: 1em;
+ }
+
+ #lnkDownload {
+    margin: 0 auto;
+ }
