@@ -1,3 +1,8 @@
+var cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove",function(x){
+    cursor.style.cssText = "left: " + x.clienX + "px; top: " + x.clientY + "px;";
+});
+
 const initCanvas = (id) => {
     return new fabric.Canvas(id, {
         width: 500,

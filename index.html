@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="pencilbun.png">
     <title>Document</title>
 </head>
 <body>
-    <h2>DoodleNotes</h2>
+    <br>
+    <div class="doodle">
+    <img src="doodlenotes.png" alt="Hand-drawn DoodleNotes!">
+    </div>
+    <p><center>An inconvenient way to take notes</center></p>
+    <div class="bun"><img src="pencilbun.png" alt="goofy looking bunny holding a pencil"></div>
+
+    <span class="cursor"></span>
     <canvas id="canvas"></canvas>
 
-    <button onclick='toggleMode(modes.pan)'>Toggle Pan</button>
-    <button onclick='toggleMode(modes.drawing)'>Toggle Drawing</button>
+    <button onclick='toggleMode(modes.pan)'>Move Stuff</button>
+    <button onclick='toggleMode(modes.drawing)'>Doodle</button>
     <input id='colorPicker' value='#000000' data-jscolor="">
     <button onclick='clearCanvas(canvas)'>Clear</button>
 
